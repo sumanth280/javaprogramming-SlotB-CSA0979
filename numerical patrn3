@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PatternPrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+        
+        // Initializing the first value in the current row as 1
+        int currentVal = 1;
+        
+        // Printing the pattern
+        for (int i = 0; i < rows; i++) {
+            // Printing spaces before the values in each row
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("  ");
+            }
+            
+            // Printing the values in the current row
+            for (int j = 0; j <= i; j++) {
+                System.out.print(currentVal + "   ");
+                
+                // Updating the value for the next column
+                currentVal = currentVal * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
