@@ -1,10 +1,11 @@
 import java.io.*;
-import java.util.*;
 class sample
 {
 	public static void main(String arg[])
 	{
-		System.out.println("welcome to java");
+		int a=10;
+		int b=15;
+		int s=a+b;
+		System.out.println(a+"+"+b+"="+s);
 	}
 }
-
