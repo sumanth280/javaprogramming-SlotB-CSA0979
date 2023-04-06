@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.io.*;
+public class principal {
+    public static void main(String[] args) 
+    {
+        int p,s,c,y,a,b;
+        System.out.println("enter the principal amunt:");
+        Scanner sc=new Scanner(System.in);
+        p=sc.nextInt();
+        System.out.println("enter the num of years:");
+        y=sc.nextInt();
+        System.out.println("enter 0 for senior citizen and 1 for others");
+        c=sc.nextInt();
+        if(c==0)
+        {
+        System.out.println("interest:"+((p*0.12*y)));
+        }
+        else if(c==1)
+        {
+        System.out.println("interest:"+((p*0.10*y)));
+        }
+        else
+        System.out.println("invalid input");
+        
+    }
+}
