@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class MatrixAddition {
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // read the dimensions of the matrices from the user
+        System.out.print("Enter the number of rows: ");
+        int rows = input.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int cols = input.nextInt();
+        
+        // create the matrices with the given dimensions
+        int[][] matrix1 = new int[rows][cols];
+        int[][] matrix2 = new int[rows][cols];
+        
+        // read the elements of the matrices from the user
+        System.out.println("Enter the elements of the first matrix:");
+        readMatrix(matrix1, input);
+        System.out.println("Enter the elements of the second matrix:");
+        readMatrix(matrix2, input);
+        
+        // add the matrices
+        int[][] result = addMatrices(matrix1, matrix2);
+        
+        // print the result
+        System.out.println("Result:");
+        printMatrix(result);
+    }
+    
+    public static void readMatrix(int[][] matrix, Scanner input) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = input.nextInt();
+            }
+        }
+    }
+    
+    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows = matrix1.length;
+        int cols = matrix1[0].length;
+        int[][] result = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        return result;
+    }
+    
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int elem : row) {
+                System.out.print(elem + " ");
+            }
+            System.out.println();
+        }
+    }
+}
