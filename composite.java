@@ -1,51 +1,22 @@
-import java.util.Scanner;
-public class composite 
+import java.io.*;
+import java.util.*;
+class composite
 {
- public static void main(String[] args)
- {
-  try
- {
- int p_count = 0, c_count = 0;
- float[] arr;
- int size;
- Scanner s = new Scanner(System.in);
- System.out.print("Enter the no. of element: ");
- size = s.nextInt();
- arr = new float[size];
- System.out.println("Enter the elements: ");
- for (int i = 0; i < size; i++)
- arr[i] = s.nextFloat();
- for (int j = 0; j < size; j++) {
- int count = 0;
- if (arr[j] > 0) {
- for (int k = 1; k <= arr[j]; k++) {
- if (arr[j] % k == 0)
- count++;
- }
- if (count > 2)
- c_count++;
- else
- p_count++;
- }
- else if(arr[j]<0) {
- for (float k =arr[j]; k<=-1; k++) {
- if (arr[j] % k == 0)
- count++;
- }
- if (count > 2){
- c_count++;
- }
- else{
- p_count++;
- }
- }
- }
- System.out.println("No. of composite num: " + c_count);
- s.close();
- }
- catch(Exception e)
- {
-     System.out.println("Enter only positive numbers");
- }
- }
+	public static void main(String args[])
+	{
+		int a[]={16,18,27,16,23,21,19};
+		int c=0;
+		for(int i=0;i<7;i++)
+		{
+			if(a[i]%2==0)
+			{
+				c++;
+			}
+			else if(a[i]%3==0)
+			{
+				c++;
+			}
+		}
+		System.out.println("compocite number:"+c);
+	}
 }
