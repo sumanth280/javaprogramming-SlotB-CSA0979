@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+class convertor
+{
+	public static void main(String arg[])
+	{
+		String s;
+		Scanner a=new Scanner(System.in);
+		s=a.nextLine();
+		int i=Integer.parseInt(s);
+		System.out.println("String : "+s);
+		System.out.println("Integer : "+i);
+	}
+}
+Footer
+© 2023 GitHub, Inc.
